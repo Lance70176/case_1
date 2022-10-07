@@ -626,7 +626,7 @@ echo '
         //替換主要 APP 圖片, 對應 url 的 kwtype 數字 Start
         var mainAppInfo = {
             "1": {//彩票
-                "img_src":"./static_version/static/images/1299_logo.png",
+                "img_src":"./static_version/static/images/256x256bb.png",
                 "url_src":"https://ip5156.com"
             },
 			"2": {//体育
