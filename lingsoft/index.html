@@ -1,0 +1,269 @@
+<html lang="en" mip>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>落地页</title>
+    <meta name="Keywords" content="落地页" />
+    <meta name="Description" content="落地页" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="applicable-device" content="pc,mobile">
+    <link rel="stylesheet" href="./css/word.css">
+    <link rel="stylesheet" href="./css/mip.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <script src="./js/jquery-1.5.2.min.js"></script>
+    <script src="./js/mip.js"></script>
+    <script id="rem" src="./js/rem.js"></script>
+    <script>
+        var is_spider    = "";
+        var app_keyword  = "&#53;&#48;&#48;&#118;&#105;&#112;&#24425;&#31080;&#32593;&#23448;&#26041;&#33529;&#26524;&#29256;";
+        var area_type_id = "1";
+        var type_id      = "1";
+    </script>
+</head>
+
+<body>
+    
+    <script>
+        var is_pc = document.documentElement.clientWidth > 768
+        if(is_pc){
+            $(".header_bg").show()
+        }else{
+            $("#wap_div").show()
+        }
+    </script>
+    <div class="wrap-html mobile">
+
+
+
+
+        <div class="home-page">
+            <!-- <div class="bread-nav">
+                <span>位置：</span>
+                <a title="首页" href="/">首页</a> >
+                <a title="游戏安装" href="javascript:void(0);">游戏安装</a> >
+                <a id="download_app_category"  title="落地页" href="#">落地页</a>
+            </div> -->
+            <div class="wrap-loading-details">
+                <div class="wrap-child">
+                    <div class="wrap-child-left">
+                        <div class="loading-details">
+                            <div class="loading-details-box">
+                                <mip-img class="loading-img" src="./images/bg2.png" id="download_app_img" alt="落地页"></mip-img>
+                                <!-- <div class="loading-fr-details">
+                                    <h1 id="download_app_name">落地页</h1>
+                                    <p class="details-btn download">
+                                        <span class="android-icon">
+                                            <mip-img  src="./images/icon_xiajia.png" alt=""></mip-img>
+                                        </span>
+                                        <span class="ios-icon">
+                                            <mip-img src="./images/ios.png" alt=""></mip-img>
+                                        </span>
+                                        <i class="isMobile-btn">立即下载</i>
+                                    </p>
+                                </div> -->
+                            </div>
+                        </div>
+                            <script src="./js/bdtongji.js?typeid=1"></script>
+                            <script src="./js/appconfig.js?v=1.1&t=1"></script>
+                            <script src="./js/showHotApp.js?v=1.1"></script>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <div class="wrap-pupop" style="display:none;">
+        <div class="wrap-pupop-btn download">
+            <span class="android-icon">
+                <mip-img  src="./images/icon_xiajia.png" alt=""></mip-img>
+            </span>
+            <span class="ios-icon">
+                <mip-img src="./images/ios.png" alt=""></mip-img>
+            </span>
+            立即下载
+        </div>
+    </div>
+    </div>
+    <script src="./js/word.js?v=20210817"></script>
+    <script src="./js/3g/download.js?1"></script>
+    <!-- <script src="./js/fake_404.js?v=20201229"></script> -->
+    <script>
+        var text_arr1 = []
+        $(".spm").each(function (a, s) {
+            var text = $(s).text().trim()
+            text_arr1.push(text)
+            if (text.length > 5) {
+                $(s).html($(s).html().trim().slice(0, 5))
+            }
+        })
+        var text_arr2 = []
+        $(".fr-detail-pc h5").each(function (a, s) {
+            var text = $(s).text().trim()
+            text_arr2.push(text)
+            if (text.length > 8) {
+                $(s).html($(s).html().trim().slice(0, 8))
+            }
+        })
+        var name = "落地页";
+        var source = 1;
+        //根据客户端，修改页面内容
+        var client_type = judgeClient();
+        //点击下载
+        $(".download").click(function ()  {
+            down_click(name);
+        })
+        // 发布逻辑
+        // var is_send = true;
+        // $(".send-btn").click(function () {
+        //     if(is_send){
+        //         is_send = false;
+        //         var content = $("textarea").val().trim();
+        //         var title   = "落地页";
+        //         var url     = document.URL;
+        //         var website_id = "53";
+
+        //         if(content == '') {
+        //             alert("请输入您要提交的内容");
+        //             return false;
+        //         }
+
+        //         $.ajax({
+        //             type:'POST',
+        //             url:'./getWebTjCode.js',
+        //             data:{content:content, title:title, url:url, website_id:website_id},
+        //             success:function (res) {
+        //                 is_send = true;
+        //                 if(res) {
+        //                     $("textarea").val("");
+        //                     alert("提交成功，需要审核才能显示")
+        //                 } else {
+        //                     alert("服务器繁忙，请稍后再试")
+        //                 }
+        //             }
+        //         })
+        //     }
+        //     setTimeout(function(){is_send = true;},1000) //防止ajax异常导致长时间无法提交
+        // })
+    </script>
+    <script>
+    //baidutongji
+    </script>
+    <script>
+    var is_spider = "";
+    var browser = {
+        versions: function () {
+            var u = navigator.userAgent, app = navigator.appVersion;
+            return {//移动终端bai浏览器版本信息
+                mobile: (!!u.match(/AppleWebKit.*Mobile/) || !!u.match(/Windows Phone/) || !!u.match(/Android/) || !!u.match(/MQQBrowser/)) && !u.match(/iPad/)//是否为移动终端
+            };
+        }()
+    }
+    if (!browser.versions.mobile) {
+        // fake_404(is_spider);
+    }
+
+
+    </script>
+
+    <script type="text/javascript">
+
+        //取得關鍵字
+        var kw = getQueryString('kw');
+        var kwtype = getQueryString('kwtype');
+        // alert(kwtype);
+
+
+        //若為 unicode, 進行 unicode2string
+        kw = eval("'" + kw + "'");
+
+        $('title').html(kw);
+        //替換主要 APP 分類路徑
+        // var list = document.body.innerHTML = document.body.innerHTML.replace('500vip彩票网官方苹果版', kw);
+        var download_app_category = document.getElementById("download_app_category");
+
+        if (download_app_category != null) {
+            download_app_category.innerHTML = kw;    
+        }
+        
+
+
+        //替換主要 APP 名稱
+        var download_app_name = document.getElementById("download_app_name");
+        if (download_app_name != null) {
+            download_app_name.innerHTML = kw;
+        }
+        
+
+        //替換主要 APP 圖片, 對應 url 的 kwtype 數字 Start
+        var mainAppInfo = {
+            "1": {//彩票
+                "img_src":"./static_version/static/images/1299_logo.png"
+            },
+			           "2": {//体育
+                "img_src":"./static_version/static/images/nba.jpg"
+            },
+			           "3": {//棋牌
+                "img_src":"./static_version/static/images/kyqp.png"
+            },
+			           "4": {//真人
+                "img_src":"./static_version/static/images/eo9n.png"
+            },
+			           "5": {//捕鱼
+                "img_src":"./static_version/static/images/download.jpg"
+            }
+			
+        }
+        
+        //替換主要 APP 圖片, 對應 url 的 kwtype 數字 End
+        var download_app_img = document.getElementById("download_app_img");
+        if (download_app_img != null) {
+            if (kwtype != '') {
+                download_app_img.setAttribute('src',mainAppInfo[kwtype].img_src);    
+            }
+        }
+        
+        function getQueryString(paramName) { 
+         
+            var url = window.location.toString(); //取得當前網址
+            var str = ""; //參數中等號左邊的值            
+            var channel_id = '';
+
+            if(window.location.search) {
+                //如果網址有"?"符號
+                var ary = url.split("?")[1].split("&");
+
+                // alert(ary);
+
+                if (ary == null) {
+                    return channel_id;
+                }
+
+                //取得"?"右邊網址後利用"&"分割字串存入ary陣列 ["a=1","b=2","c=3"]
+                for (var i in ary) {
+                    //取得陣列長度去跑迴圈，如:網址有三個參數，則會跑三次
+                    str = ary[i].split("=")[0];
+                    channel_id = '';
+                    //取得參數"="左邊的值存入str變數中
+                    if (str == paramName) {
+                        //若str等於想要抓取參數 如:b
+                        channel_id = decodeURI(ary[i].split("=")[1]); //抓msg
+                    
+                        //取得b等號右邊的值並經過中文轉碼後存入str_value
+                    }
+                }
+            }
+
+            return channel_id;
+
+        }
+    </script>
+
+
+    <script src="./getArea.js"></script>
+    <!-- <script src="./getWebTjCode.js?website_id=53"></script> -->
+</body>
+
+</html>

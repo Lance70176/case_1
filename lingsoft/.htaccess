@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+#不显示index.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^([0-9]*)$  index.php?id=$1 [QSA,PT,L]
+RewriteRule ^([0-9]*)\.html$  index.php?id=$1 [QSA,PT,L]
+
+RewriteRule ^([a-zA-Z]*)$  index.php?id=$1 [QSA,NC,PT,L]
+RewriteRule ^([a-zA-Z]*)\.html$  index.php?id=$1 [QSA,NC,PT,L]
+
+
+</IfModule>
