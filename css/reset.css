@@ -146,6 +146,7 @@ img {
   color: #000f2c;
   text-align: center;
   font-weight: bold;
+  position: relative;
 }
 .link {
   margin: 25px auto;
@@ -786,6 +787,28 @@ img {
   object-fit: cover;
 }
 
+.tele-qrcode {
+  position: absolute;
+  width: 120px;
+  height: 150px;
+  padding: 25px;
+  border-radius: 15px;
+  top: 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #fff;
+}
+.tele-qrcode img {
+  width: 100%;
+}
+.tele-qrcode.right {
+  left: auto;
+  right: 10px;
+}
+
+.tele-qrcode.left {
+  left: 10px;
+}
+
 @media only screen and (max-width: 768px) {
   .switch-btn-group {
     width: 90%;
@@ -807,5 +830,9 @@ img {
     border-radius: 10px;
     cursor: pointer;
     letter-spacing: 0.5;
+  }
+
+  .tele-qrcode {
+    display: none;
   }
 }
