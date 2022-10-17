@@ -1,346 +1,190 @@
-<html lang="zh"><!--[if IE]><![endif]--><!--[if lt IE 7 ]>
-<html lang="zh" class="ie6"><![endif]--><!--[if IE 7 ]>
-<html lang="zh" class="ie7"><![endif]--><!--[if IE 8 ]>
-<html lang="zh" class="ie8"><![endif]--><!--[if IE 9 ]>
-<html lang="zh" class="ie9"><![endif]--><!--[if (gt IE 9)|!(IE)]><!--><!--<![endif]--><head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="./css/reset.css">
+<html lang="zh">
+  <!--[if IE]> <![endif]-->[endif]--><!--[if lt IE 7]>
+<html lang="zh" class="ie6"><![endif]-->[endif]--><!--[if IE 7]>
+<html lang="zh" class="ie7"><![endif]-->[endif]--><!--[if IE 8]>
+<html lang="zh" class="ie8"><![endif]-->[endif]--><!--[if IE 9]>
+<html lang="zh" class="ie9"><![endif]--><!--[if (gt IE 9)|!(IE)]><!--><!--<!
+  [endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
     <link rel="icon" href="./images/sbiaoqian.png" />
-</head>
-<body>
-<div>
-    <div class="diversion">
-        <div class="diversion-title pc diversion-top1"><img src="./images/stop_1.png" alt=""><img src="./images/sgf.png" class="img1"></div>
+  </head>
+  <body>
+    <div>
+      <div class="diversion">
+        <div class="diversion-title pc diversion-top1">
+          <img src="./images/stop_1.png" alt="" /><img
+            src="./images/sgf.png"
+            class="img1"
+          />
+        </div>
         <div class="pc link">
-            <div class="t1" id="headT1">
-                <div class="h1"></div>
+          <div class="t1" id="headT1">
+            <div class="h1"></div>
+          </div>
+          <!--      <div class="t1">&#27489;&#36814;&#36914;&#20837;&#28595;&#38272;&#21338;&#24425;&#22519;&#29031;&#30435;&#23519;&#23616;&#23448;&#32178;</div>-->
+          <!--      <div class="t2"><span style="color: #0263bc;">&#50;&#48;&#50;&#50;&#24180;&#19990;&#30028;&#26479;</span>  &#23448;&#26041;&#36187;&#20107;&#21512;&#20316;&#20249;&#20276;</div>-->
+          <div class="t2"><div class="h2"></div></div>
+          <div class="tele-qrcode right">
+            <div class="qrcode-text">
+              事务处理请+TG <br />
+              <a
+                href="
+                    https://t.me/RU6WJ6"
+                target="_blank"
+                >@ru6wj6</a
+              >
             </div>
-            <!--      <div class="t1">&#27489;&#36814;&#36914;&#20837;&#28595;&#38272;&#21338;&#24425;&#22519;&#29031;&#30435;&#23519;&#23616;&#23448;&#32178;</div>-->
-            <!--      <div class="t2"><span style="color: #0263bc;">&#50;&#48;&#50;&#50;&#24180;&#19990;&#30028;&#26479;</span>  &#23448;&#26041;&#36187;&#20107;&#21512;&#20316;&#20249;&#20276;</div>-->
-            <div class="t2"><div class="h2"></div></div>
-            <div class="tele-qrcode right">
-                <img src="./images/telegram_icon.jpg" alt="">
+            <img src="./images/telegram_icon.jpg" alt="" />
+          </div>
+
+          <div class="tele-qrcode left">
+            <div class="qrcode-text">
+              事务处理请+TG <br />
+              <a
+                href="
+                    https://t.me/RU6WJ6"
+                target="_blank"
+                >@ru6wj6</a
+              >
             </div>
-    
-            <div class="tele-qrcode left">
-                <img src="./images/telegram_icon.jpg" alt="">
-            </div>
+            <img src="./images/telegram_icon.jpg" alt="" />
+          </div>
         </div>
 
         <!-- <div class="liner"></div> -->
         <div class="switch-btn-group">
-            <div class="switch-btn" onclick="switchPlatformType(1)">體育推薦平台</div>
-            <div class="switch-btn" onclick="switchPlatformType(2)">彩票推薦平台</div>
+          <div class="switch-btn" onclick="switchPlatformType(1)">
+            體育推薦平台
+          </div>
+          <div class="switch-btn" onclick="switchPlatformType(2)">
+            彩票推薦平台
+          </div>
         </div>
         <div id="callBox">
-            <div class="box">
-                <div class="box-all">
-                    <div class="diversion-btn" onclick="call('0')">
-                        <div class="btn">
-                            <div class="img bob"></div>
-                            <div>
-                                <div class="text"><span>BOB体育</span><br><span class="title_t">世界杯官方合作伙伴</span></div>
-                                <div class="addWeb">官方注册</div>
-                           </div>
-                        </div>
-                    </div>
-
-                    <div class="diversion-btn" onclick="call('1')">
-                        <div class="btn">
-                            <div class="img boyu"></div>
-                            <div> 
-                                <div class="text"><span>博鱼体育</span><br><span class="title_t">世界杯官方合作伙伴</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="diversion-btn" onclick="call('2')">
-                        <div class="btn">
-                            <div class="img kaiyun"></div>
-                            <div>
-                                <div class="text"><span>开云体育</span><br><span class="title_t">世界杯官方合作伙伴</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="diversion-btn" onclick="call('3')">
-                        <div class="btn">
-                            <div class="img tianbo"></div>
-                            <div>
-                                <div class="text"><span>天博体育</span><br><span class="title_t">世界杯官方合作伙伴</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="diversion-btn" onclick="call('4')">
-                        <div class="btn">
-                            <div class="img leyu"></div>
-                            <div>
-                                <div class="text"><span>乐鱼体育</span><br><span class="title_t">世界杯官方合作伙伴</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="diversion-btn" onclick="call('5')">
-                        <div class="btn">
-                            <div class="img yibei"></div>
-                            <div> 
-                                <div class="text"><span>易倍体育</span><br><span class="title_t">世界杯官方合作伙伴</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                           
-                        </div>
-                    </div>
-
-                    <div class="diversion-btn" onclick="call('6')">
-                        <div class="btn">
-                            <div class="jinsha ledong"></div>
-                            <div>
-                                <div class="text"><span>乐动体育</span><br><span class="title_t">世界杯官方合作伙伴</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                </div>
+          <div class="box">
+            <div class="box-all" id="sport_list_container"></div>
+            <div class="pagi">
+              <div class="pagi-btn" onclick="set_page('sport', 1)">1</div>
+            </div>
+          </div>
         </div>
 
-
         <div id="lotteryBox">
-            <div class="box_cai">
-                <div class="box-all">
-
-                    <div class="diversion-btn" onclick="call_cai('0')">
-                        <div class="btn">
-                            <div class="img oulu"></div>
-                            <div>
-                                <div class="text"><span>欧亿7-欧陆娱乐</span><br><span class="title_t">奖金号:1980</span></div>
-                                <div class="addWeb">官方注册</div>
-                           </div>
-                        </div>
-                    </div>
-
-
-                    <div class="diversion-btn" onclick="call_cai('1')">
-                        <div class="btn">
-                            <div class="img jiaodian"></div>
-                            <div> 
-                                <div class="text"><span>拉菲10-焦点娱乐</span><br><span class="title_t">奖金号:1980</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="diversion-btn" onclick="call_cai('2')">
-                        <div class="btn">
-                            <div class="img yaoshi"></div>
-                            <div>
-                                <div class="text"><span>赢咖6-耀世娱乐</span><br><span class="title_t">奖金号:1980</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="diversion-btn" onclick="call_cai('3')">
-                        <div class="btn">
-                            <div class="img mentu"></div>
-                            <div>
-                                <div class="text"><span>拉菲9-门徒娱乐</span><br><span class="title_t">奖金号:1980</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="diversion-btn" onclick="call_cai('4')">
-                        <div class="btn">
-                            <div class="img shenghuang"></div>
-                            <div>
-                                <div class="text"><span>赢咖5-盛煌娱乐</span><br><span class="title_t">奖金号:1980</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="diversion-btn" onclick="call_cai('5')">
-                        <div class="btn">
-                            <div class="img fulian"></div>
-                            <div> 
-                                <div class="text"><span>富联娱乐</span><br><span class="title_t">奖金号:1980</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                           
-                        </div>
-                    </div>
-
-                    <div class="diversion-btn" onclick="call_cai('6')">
-                        <div class="btn">
-                            <div class="jinsha lanshi"></div>
-                            <div>
-                                <div class="text"><span>欧亿6-蓝狮娱乐</span><br><span class="title_t">奖金号:1980</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="diversion-btn" onclick="call_cai('7')">
-                        <div class="btn">
-                            <div class="img dingdian"></div>
-                            <div>
-                                <div class="text"><span>欧亿5-鼎点娱乐</span><br><span class="title_t">奖金号:1980</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="diversion-btn" onclick="call_cai('8')">
-                        <div class="btn">
-                            <div class="img fengbao"></div>
-                            <div>
-                                <div class="text"><span>拉菲8-风暴娱乐</span><br><span class="title_t">奖金号:1980</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="diversion-btn" onclick="call_cai('9')">
-                        <div class="btn">
-                            <div class="img xinghui"></div>
-                            <div>
-                                <div class="text"><span>赢咖4-星辉娱乐</span><br><span class="title_t">奖金号:1980</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <div class="diversion-btn" onclick="call('10')">
-                        <div class="btn">
-                            <div class="img tianshun"></div>
-                            <div>
-                                <div class="text"><span>天顺娱乐</span><br><span class="title_t">奖金号:1976</span></div>
-                                <div class="addWeb">官方注册</div>
-                            </div>
-                        </div>
-                    </div> -->
-
-
-                </div>
-                </div>            
-
+          <div class="box_cai">
+            <div class="box-all" id="cai_list_container"></div>
+            <div class="pagi">
+              <div class="pagi-btn" onclick="set_page('cai', 1)">1</div>
+            </div>
+          </div>
         </div>
 
         <div class="diversion-tips show-flex">
-            <div class="t3"><img src="./images/simg1.png" alt=""></div>
-            <div class="t3"><img src="./images/simg2.png" alt=""></div>
-            <div class="t3"><img src="./images/simg3.png" alt=""></div>
+          <div class="t3"><img src="./images/simg1.png" alt="" /></div>
+          <div class="t3"><img src="./images/simg2.png" alt="" /></div>
+          <div class="t3"><img src="./images/simg3.png" alt="" /></div>
         </div>
         <div class="diversion-tips dj">
-            <div>2022世界杯赛事协作认证</div>
-            <!--      <div>-->
-            <!--        &#28595;&#38272;&#21338;&#24425;&#30435;&#23519;&#23616;&#30435;&#31649;&#32;&#32;&#32;&#32;&#32;&#32;&#20449;&#35709;&#20445;&#38556;&#65281;-->
-            <!--      </div>-->
-            <div id="diversionTipsH3">
-                <span class="h3"></span>
-            </div>
+          <div>2022世界杯赛事协作认证</div>
+          <!--      <div>-->
+          <!--        &#28595;&#38272;&#21338;&#24425;&#30435;&#23519;&#23616;&#30435;&#31649;&#32;&#32;&#32;&#32;&#32;&#32;&#20449;&#35709;&#20445;&#38556;&#65281;-->
+          <!--      </div>-->
+          <div id="diversionTipsH3">
+            <span class="h3"></span>
+          </div>
         </div>
 
         <div class="other_box">
-            <div class="o1">FIFA官方合作夥伴</div>
-            <div class="o2 show-flex">
-                <div><img src="./images/so1.png" alt=""></div>
-                <div><img src="./images/so2.png" alt=""></div>
-                <div><img src="./images/so3.png" alt=""></div>
-                <div><img src="./images/so4.png" alt=""></div>
-                <div><img src="./images/so5.png" alt=""></div>
-                <div><img src="./images/so6.png" alt=""></div>
-                <div><img src="./images/so7.png" alt=""></div>
-            </div>
+          <div class="o1">FIFA官方合作夥伴</div>
+          <div class="o2 show-flex">
+            <div><img src="./images/so1.png" alt="" /></div>
+            <div><img src="./images/so2.png" alt="" /></div>
+            <div><img src="./images/so3.png" alt="" /></div>
+            <div><img src="./images/so4.png" alt="" /></div>
+            <div><img src="./images/so5.png" alt="" /></div>
+            <div><img src="./images/so6.png" alt="" /></div>
+            <div><img src="./images/so7.png" alt="" /></div>
+          </div>
         </div>
 
-        
         <div class="footer_text" id="footer_text">
-            <div class="h4"></div>
+          <div class="h4"></div>
         </div>
+      </div>
     </div>
-</div>
-<script>
-    function call(index) {
+    <script>
+      function call(index) {
         var site = new Array(
-            "https://www.on4xgo.com/?agent_code=11356759",
-            "https://www.dxus0.com:9964/register/?i_code=3103143",
-            "http://830k.net/",
-            "https://www.udldti.com:7443/?agent_code=3693031",
-            "https://www.dxus0.com:9964/register/?i_code=3103143",
-            "https://www.emc715.com/g/ru6wj06888",
-            "https://www.lddd.bet/download?key=1339648",
-            );
+          "https://www.on4xgo.com/?agent_code=11356759",
+          "https://www.dxus0.com:9964/register/?i_code=3103143",
+          "http://830k.net/",
+          "https://www.udldti.com:7443/?agent_code=3693031",
+          "https://www.dxus0.com:9964/register/?i_code=3103143",
+          "https://www.emc715.com/g/ru6wj06888",
+          "https://www.lddd.bet/download?key=1339648"
+        );
         var referrer = document.referrer;
         if (!referrer) {
-            try {
-                if (window.opener) {
-                    referrer = window.opener.location.href;
-                }
+          try {
+            if (window.opener) {
+              referrer = window.opener.location.href;
             }
-            catch (e) { }
+          } catch (e) {}
         }
-        var channel = getQueryString('channel');
-        var ref = getQueryString('ref');
+        var channel = getQueryString("channel");
+        var ref = getQueryString("ref");
 
-        if (channel == null)
-            channel = "";
+        if (channel == null) channel = "";
         var objs = document.getElementsByTagName("img");
-        var param = "?channel=" + channel + "&referer=" + referrer+'?'+ref;
+        var param = "?channel=" + channel + "&referer=" + referrer + "?" + ref;
         window.open(site[index] + param);
-    }
-    function call_cai(index) {
+      }
+      function call_cai(index) {
         var site = new Array(
-            "https://c.olu000.com/Register/oLJBSkrTyO",
-            "https://888.jdylwp95.com/user/login-form/register/18b7b90cb98666d35314c3c3c5334d43",
-            "https://888.ysai0159.com/user/login-form/register/d1163b5c45d3b20eb57dd47ac022289e",
-            "https://ews.mtyl1188.com/user/login-form/register/4e9b38908ad09f6df3a4a36e5924178e",
-            "https://666.shyl002.com/user/login-form/register/c39c1e935f6acf3cc69ba66e71889240",
-            "https://s.flyl00.com/Register/KdSOzXUKXa",
-            "https://hh.lanshi5.com/Register/GEdlw2jZ1T",
-            "https://h.ddyule1.com/Register/yEjuEUXkhz",
-            "https://888.fbygd16.com//user/login-form/register/cad5e332f5489cf0cc189327a7f4bf14",
-            "https://h.xinghui01.com/Register/Yc3anjGSPa",
-            "https://s.tssc11.com/Register/xAAPUK3Xow",
-            );
+          "https://c.olu000.com/Register/oLJBSkrTyO",
+          "https://888.jdylwp95.com/user/login-form/register/18b7b90cb98666d35314c3c3c5334d43",
+          "https://888.ysai0159.com/user/login-form/register/d1163b5c45d3b20eb57dd47ac022289e",
+          "https://ews.mtyl1188.com/user/login-form/register/4e9b38908ad09f6df3a4a36e5924178e",
+          "https://666.shyl002.com/user/login-form/register/c39c1e935f6acf3cc69ba66e71889240",
+          "https://s.flyl00.com/Register/KdSOzXUKXa",
+          "https://hh.lanshi5.com/Register/GEdlw2jZ1T",
+          "https://h.ddyule1.com/Register/yEjuEUXkhz",
+          "https://888.fbygd16.com//user/login-form/register/cad5e332f5489cf0cc189327a7f4bf14",
+          "https://h.xinghui01.com/Register/Yc3anjGSPa",
+          "https://s.tssc11.com/Register/xAAPUK3Xow"
+        );
         var referrer = document.referrer;
         if (!referrer) {
-            try {
-                if (window.opener) {
-                    referrer = window.opener.location.href;
-                }
+          try {
+            if (window.opener) {
+              referrer = window.opener.location.href;
             }
-            catch (e) { }
+          } catch (e) {}
         }
-        var channel = getQueryString('channel');
-        var ref = getQueryString('ref');
+        var channel = getQueryString("channel");
+        var ref = getQueryString("ref");
 
-        if (channel == null)
-            channel = "";
+        if (channel == null) channel = "";
         var objs = document.getElementsByTagName("img");
-        var param = "?channel=" + channel + "&referer=" + referrer+'?'+ref;
+        var param = "?channel=" + channel + "&referer=" + referrer + "?" + ref;
         window.open(site[index] + param);
-    }
+      }
 
-    function getQueryString(name) {
+      function getQueryString(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
         var r = window.location.search.substr(1).match(reg);
-        if (r != null) return unescape(r[2]); return null;
-    }
-</script>
-<script>
-    function callHtml () {
+        if (r != null) return unescape(r[2]);
+        return null;
+      }
+    </script>
+    <script>
+      function callHtml() {
         // Head
         // document.getElementById('headT1').innerHTML = `<div class="h1"></div>`
         // Center
@@ -348,32 +192,232 @@
         // Footer
         // document.getElementById('diversionTipsH3').innerHTML = `<span class="h3"></span>`
         // Footer
-        document.getElementById('footer_text').innerHTML = ``
-    }
-    setTimeout(() => {
-        callHtml()
-    }, 1500)
-</script>
-<script>
-    // 切換體育 1 | 彩票 2
-    function switchPlatformType(index) {
+        document.getElementById("footer_text").innerHTML = ``;
+      }
+      setTimeout(() => {
+        callHtml();
+      }, 1500);
+    </script>
+    <script>
+      // 切換體育 1 | 彩票 2
+      function switchPlatformType(index) {
         if (index == 1) {
-            document.getElementById('callBox').style.display = 'block'
-            document.getElementById('lotteryBox').style.display = 'none'
+          document.getElementById("callBox").style.display = "block";
+          document.getElementById("lotteryBox").style.display = "none";
         } else if (index == 2) {
-            document.getElementById('callBox').style.display = 'none'
-            document.getElementById('lotteryBox').style.display = 'block'
+          document.getElementById("callBox").style.display = "none";
+          document.getElementById("lotteryBox").style.display = "block";
         }
-    }
+      }
 
-    let searchParams = new URLSearchParams(window.location.search);
-    const type = searchParams.get("type") || 1
-    switchPlatformType(type)
-    
-</script>
+      let searchParams = new URLSearchParams(window.location.search);
+      const type = searchParams.get("type") || 1;
+      switchPlatformType(type);
+    </script>
 
-<div style="display:none;">
-    <!-- <script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1280035605&amp;web_id=1280035605"></script> -->
-</div>
-</body>
+    <script>
+        // 分页功能
+
+        // pagination
+      function htmlToElement(html) {
+        var template = document.createElement("template");
+        html = html.trim(); // Never return a text node of whitespace as the result
+        template.innerHTML = html;
+        return template.content.firstChild;
+      }
+      const sport_list = [
+        {
+          title: "BOB体育",
+          desc: "世界杯官方合作伙伴",
+          icon: "bob",
+          call_index: "0",
+          page: 1,
+        },
+        {
+          title: "博鱼体育",
+          desc: "世界杯官方合作伙伴",
+          icon: "boyu",
+          call_index: "1",
+          page: 1,
+        },
+        {
+          title: "开云体育",
+          desc: "世界杯官方合作伙伴",
+          icon: "kaiyun",
+          call_index: "2",
+          page: 1,
+        },
+        {
+          title: "天博体育",
+          desc: "世界杯官方合作伙伴",
+          icon: "tianbo",
+          call_index: "3",
+          page: 1,
+        },
+        {
+          title: "乐鱼体育",
+          desc: "世界杯官方合作伙伴",
+          icon: "leyu",
+          call_index: "4",
+          page: 1,
+        },
+        {
+          title: "易倍体育",
+          desc: "世界杯官方合作伙伴",
+          icon: "yibei",
+          call_index: "5",
+          page: 1,
+        },
+        {
+          title: "乐动体育",
+          desc: "世界杯官方合作伙伴",
+          icon: "ledong",
+          call_index: "6",
+          page: 1,
+        },
+      ];
+
+      
+
+      const list_sport_items = (container, list, currentPage) => {
+        list.filter(item => item.page == currentPage).forEach((item) => {
+            container.append(
+              htmlToElement(
+                `<div class="diversion-btn" onclick="call(${item.call_index})">
+                    <div class="btn">
+                        <div class="img ${item.icon}">
+                    </div>
+                    <div>
+                        <div class="text">
+                            <span>${item.title}</span><br /><span class="title_t"
+                        >${item.desc}</span
+                        >
+                    </div>
+                    <div class="addWeb">官方注册</div>
+                    </div>
+                </div>
+            </div>`
+              )
+            );
+          });
+      };
+
+      const sport_list_container = document.getElementById(
+        "sport_list_container"
+      );
+      list_sport_items(sport_list_container, sport_list, 1)
+
+      const cai_list = [
+        {
+          title: "欧亿7-欧陆娱乐",
+          desc: "奖金号:1980",
+          icon: "oulu",
+          call_index: "0",
+          page: 1,
+        },
+        {
+          title: "拉菲10-焦点娱乐",
+          desc: "奖金号:1980",
+          icon: "jiaodian",
+          call_index: "1",
+          page: 1,
+        },
+        {
+          title: "赢咖6-耀世娱乐",
+          desc: "奖金号:1980",
+          icon: "yaoshi",
+          call_index: "2",
+          page: 1,
+        },
+        {
+          title: "拉菲9-门徒娱乐",
+          desc: "奖金号:1980",
+          icon: "mentu",
+          call_index: "3",
+          page: 1,
+        },
+        {
+          title: "赢咖5-盛煌娱乐",
+          desc: "奖金号:1980",
+          icon: "shenghuang",
+          call_index: "4",
+          page: 1,
+        },
+        {
+          title: "富联娱乐",
+          desc: "奖金号:1980",
+          icon: "fulian",
+          call_index: "5",
+          page: 1,
+        },
+        {
+          title: "欧亿6-蓝狮娱乐",
+          desc: "奖金号:1980",
+          icon: "jinsha lanshi",
+          call_index: "6",
+          page: 1,
+        },
+        {
+          title: "欧亿5-鼎点娱乐",
+          desc: "奖金号:1980",
+          icon: "dingdian",
+          call_index: "7",
+          page: 1,
+        },
+        {
+          title: "拉菲8-风暴娱乐",
+          desc: "奖金号:1980",
+          icon: "fengbao",
+          call_index: "8",
+          page: 1,
+        },
+        {
+          title: "赢咖4-星辉娱乐",
+          desc: "奖金号:1980",
+          icon: "xinghui",
+          call_index: "9",
+          page: 1,
+        },
+      ]
+
+      const list_cai_items = (container, list, currentPage) => {
+        list.filter(item => item.page == currentPage).forEach((item) => {
+            container.append(
+              htmlToElement(
+                `<div class="diversion-btn" onclick="call_cai('${item.call_index}'')">
+                    <div class="btn">
+                    <div class="img ${item.icon}"></div>
+                    <div>
+                        <div class="text">
+                        <span>${item.title}</span><br /><span class="title_t"
+                            >奖金号:1980</span
+                        >
+                        </div>
+                        <div class="addWeb">官方注册</div>
+                    </div>
+                    </div>
+                </div>`
+              )
+            );
+          });
+      };
+
+      const cai_list_container = document.getElementById(
+        "cai_list_container"
+      );
+      list_cai_items(cai_list_container, cai_list, 1)
+
+      const set_page = (type, page) => {
+         if (type == 'sport') {
+            list_sport_items(sport_list_container, sport_list, page)
+         } else if (type == 'cai') {
+            list_cai_items(cai_list_container, cai_list, page)  
+         }
+      }
+    </script>
+
+    <div style="display: none">
+      <!-- <script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1280035605&amp;web_id=1280035605"></script> -->
+    </div>
+  </body>
 </html>

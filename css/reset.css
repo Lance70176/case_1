@@ -136,9 +136,12 @@ img {
   display: none;
 }
 .diversion-top1 {
-  height: 100px;
-  line-height: 100px;
+  height: 70px;
+  line-height: 70px;
   border-bottom: solid 2px #e4e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .diversion-title,
 .link {
@@ -153,7 +156,7 @@ img {
   font-size: 30px;
 }
 .link .t1 {
-  font-size: 36px;
+  font-size: 30px;
   margin-bottom: 17px;
 }
 .link .t1 .h1 {
@@ -165,16 +168,20 @@ img {
   margin: 0 auto;
 }
 .link .t2 .h2 {
-  width: 448px;
-  height: 29px;
+  width: 400px;
+  height: 24px;
   background: url("./../images/h2.png") no-repeat;
   background-size: contain;
   background-position: center;
   margin: 0 auto;
 }
+
+.diversion-title img {
+  width: 80px;
+}
 .diversion-title .img1 {
-  width: 188px;
-  height: 63px;
+  width: 120px;
+  height: auto;
   margin-left: 68px;
 }
 
@@ -190,18 +197,18 @@ img {
 
 .box {
   width: 100%;
-  height: 828px;
+  height: 870px;
   padding-top: 40px;
-  background: url("./../images/new_box_bg7.png") no-repeat center top;
+  background: url("./../images/new_box_bg9.png") no-repeat center top;
   background-size: cover;
 }
 
 
 .box_cai {
     width: 100%;
-    height: 828px;
+    height: 870px;
     padding-top: 40px;
-    background: url("./../images/new_box_bg_cai.png") no-repeat center top;
+    background: url("./../images/new_box_bg_cai4.png") no-repeat center top;
     background-size: cover;
 }
 
@@ -210,7 +217,7 @@ img {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .diversion-btn {
@@ -221,7 +228,7 @@ img {
   text-decoration: none;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 0 25px;
   cursor: pointer;
 }
 
@@ -690,6 +697,7 @@ img {
   .diversion-btn {
     width: 48%;
     font-size: 14px;
+    margin: 0 1%;
   }
   .diversion-btn .btn {
     padding: 10px 6px !important;
@@ -907,22 +915,22 @@ img {
 }
 
 .switch-btn-group {
-  width: 440px;
-  margin: 40px auto;
+  width: 400px;
+  margin: 20px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .switch-btn {
-  width: 180px;
-  height: 60px;
+  width: 160px;
+  height: 45px;
   background-color: #000;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 20px;
   border-radius: 10px;
   cursor: pointer;
   letter-spacing: 0.5;
@@ -936,16 +944,16 @@ img {
 
 .tele-qrcode {
   position: absolute;
-  width: 120px;
-  height: 150px;
-  padding: 25px;
+  width: 140px;
+  height: 170px;
+  padding: 15px 20px 25px;
   border-radius: 15px;
-  top: 0px;
+  top: -75px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background-color: #fff;
 }
 .tele-qrcode img {
-  width: 100%;
+  width: 80%;
 }
 .tele-qrcode.right {
   left: auto;
@@ -954,6 +962,32 @@ img {
 
 .tele-qrcode.left {
   left: 10px;
+}
+
+.qrcode-text {
+  font-size: 14px;
+  /* position: absolute; */
+  /* top: -20px; */
+}
+
+.pagi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px auto;
+}
+
+.pagi-btn {
+  background-color: #666;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {
