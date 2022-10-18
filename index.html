@@ -1,13 +1,15 @@
 <html lang="zh">
-  <!--[if IE]> <![endif]--><!--[endif]-->
-  <!--[if lt IE 7]><html lang="zh" class="ie6"><![endif]--><!--[endif]--><!--[if IE 7]>
+  <!--[if IE]> <!
+  [endif]--><!--[endif]-->
+  <!--[if lt IE 7]><html lang="zh" class="ie6"><!
+  [endif]--><!--[endif]--><!--[if IE 7]>
 <html lang="zh" class="ie7"><![endif]-->
-<!--[endif]--><!--[if IE 8]>
+  <!--[endif]--><!--[if IE 8]>
 <html lang="zh" class="ie8"><![endif]-->
-<!--[endif]--><!--[if IE 9]>
+  <!--[endif]--><!--[if IE 9]>
 <html lang="zh" class="ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--><!--<!
-  [endif]-->
+  <!--[if (gt IE 9)|!(IE)
+  ]><!--><!--<![endif]-->
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -63,18 +65,18 @@
 
         <!-- <div class="liner"></div> -->
         <div class="switch-btn-group">
-          <div class="switch-btn" onclick="switchPlatformType(1)">
+          <div class="switch-btn" id="btn1" onclick="switchPlatformType(1)">
             體育推薦平台
           </div>
-          <div class="switch-btn" onclick="switchPlatformType(2)">
+          <div class="switch-btn" id="btn2" onclick="switchPlatformType(2)">
             彩票推薦平台
           </div>
         </div>
         <div id="callBox">
           <div class="box">
             <div class="box-all" id="sport_list_container"></div>
-            <div class="pagi">
-              <div class="pagi-btn" onclick="set_page('sport', 1)">1</div>
+            <div class="pagi" id="sport_pagi">
+              <!-- <div class="pagi-btn" onclick="set_page('sport', 1)">1</div> -->
             </div>
           </div>
         </div>
@@ -82,8 +84,8 @@
         <div id="lotteryBox">
           <div class="box_cai">
             <div class="box-all" id="cai_list_container"></div>
-            <div class="pagi">
-              <div class="pagi-btn" onclick="set_page('cai', 1)">1</div>
+            <div class="pagi" id="cai_pagi">
+              <!-- <div class="pagi-btn" onclick="set_page('cai', 1)">1</div> -->
             </div>
           </div>
         </div>
@@ -207,9 +209,13 @@
         if (index == 1) {
           document.getElementById("callBox").style.display = "block";
           document.getElementById("lotteryBox").style.display = "none";
+          document.getElementById("btn1").classList.add("active");
+          document.getElementById("btn2").classList.remove("active");
         } else if (index == 2) {
           document.getElementById("callBox").style.display = "none";
           document.getElementById("lotteryBox").style.display = "block";
+          document.getElementById("btn1").classList.remove("active");
+          document.getElementById("btn2").classList.add("active");
         }
       }
 
@@ -219,74 +225,153 @@
     </script>
 
     <script>
-        // 分页功能
-
-        // pagination
+      // utils
       function htmlToElement(html) {
         var template = document.createElement("template");
         html = html.trim(); // Never return a text node of whitespace as the result
         template.innerHTML = html;
         return template.content.firstChild;
       }
+      // 分页功能 资料
       const sport_list = [
         {
           title: "BOB体育",
           desc: "世界杯官方合作伙伴",
           icon: "bob",
           call_index: "0",
-          page: 1,
         },
         {
           title: "博鱼体育",
           desc: "世界杯官方合作伙伴",
           icon: "boyu",
           call_index: "1",
-          page: 1,
         },
         {
           title: "开云体育",
           desc: "世界杯官方合作伙伴",
           icon: "kaiyun",
           call_index: "2",
-          page: 1,
         },
         {
           title: "天博体育",
           desc: "世界杯官方合作伙伴",
           icon: "tianbo",
           call_index: "3",
-          page: 1,
         },
         {
           title: "乐鱼体育",
           desc: "世界杯官方合作伙伴",
           icon: "leyu",
           call_index: "4",
-          page: 1,
         },
         {
           title: "易倍体育",
           desc: "世界杯官方合作伙伴",
           icon: "yibei",
           call_index: "5",
-          page: 1,
         },
         {
           title: "乐动体育",
           desc: "世界杯官方合作伙伴",
           icon: "ledong",
           call_index: "6",
-          page: 1,
         },
       ];
 
-      
+      const cai_list = [
+        {
+          title: "欧亿7-欧陆娱乐",
+          desc: "奖金号:1980",
+          icon: "oulu",
+          call_index: "0",
+        },
+        {
+          title: "拉菲10-焦点娱乐",
+          desc: "奖金号:1980",
+          icon: "jiaodian",
+          call_index: "1",
+        },
+        {
+          title: "赢咖6-耀世娱乐",
+          desc: "奖金号:1980",
+          icon: "yaoshi",
+          call_index: "2",
+        },
+        {
+          title: "拉菲9-门徒娱乐",
+          desc: "奖金号:1980",
+          icon: "mentu",
+          call_index: "3",
+        },
+        {
+          title: "赢咖5-盛煌娱乐",
+          desc: "奖金号:1980",
+          icon: "shenghuang",
+          call_index: "4",
+        },
+        {
+          title: "富联娱乐",
+          desc: "奖金号:1980",
+          icon: "fulian",
+          call_index: "5",
+        },
+        {
+          title: "欧亿6-蓝狮娱乐",
+          desc: "奖金号:1980",
+          icon: "jinsha lanshi",
+          call_index: "6",
+        },
+        {
+          title: "欧亿5-鼎点娱乐",
+          desc: "奖金号:1980",
+          icon: "dingdian",
+          call_index: "7",
+        },
+        {
+          title: "拉菲8-风暴娱乐",
+          desc: "奖金号:1980",
+          icon: "fengbao",
+          call_index: "8",
+        },
+        {
+          title: "赢咖4-星辉娱乐",
+          desc: "奖金号:1980",
+          icon: "xinghui",
+          call_index: "9",
+        },
+        {
+          title: "赢咖4-星辉娱乐",
+          desc: "奖金号:1980",
+          icon: "xinghui",
+          call_index: "9",
+        },
+      ];
 
-      const list_sport_items = (container, list, currentPage) => {
-        list.filter(item => item.page == currentPage).forEach((item) => {
-            container.append(
-              htmlToElement(
-                `<div class="diversion-btn" onclick="call(${item.call_index})">
+      // pagination
+      const page_size = 10;
+
+      const count_pagi = (type, list) => {
+        const pages = Math.floor((list.length - 1) / 10) + 1;
+        console.log(pages, type);
+        const pagi = document.getElementById(`${type}_pagi`);
+        for (let index = 1; index < pages + 1; index++) {
+          pagi.append(
+            htmlToElement(
+              `
+                        <div class="pagi-btn" onclick="set_page('${type}', ${index})">${index}</div>
+                    `
+            )
+          );
+        }
+      };
+
+      count_pagi("sport", sport_list);
+
+      const list_sport_items = (container, list, start_at) => {
+        list.slice(start_at, start_at + page_size).forEach((item) => {
+          container.append(
+            htmlToElement(
+              `<div class="diversion-btn" onclick="call(${item.call_index})">
                     <div class="btn">
                         <div class="img ${item.icon}">
                     </div>
@@ -300,94 +385,23 @@
                     </div>
                 </div>
             </div>`
-              )
-            );
-          });
+            )
+          );
+        });
       };
 
       const sport_list_container = document.getElementById(
         "sport_list_container"
       );
-      list_sport_items(sport_list_container, sport_list, 1)
+      list_sport_items(sport_list_container, sport_list, 0);
 
-      const cai_list = [
-        {
-          title: "欧亿7-欧陆娱乐",
-          desc: "奖金号:1980",
-          icon: "oulu",
-          call_index: "0",
-          page: 1,
-        },
-        {
-          title: "拉菲10-焦点娱乐",
-          desc: "奖金号:1980",
-          icon: "jiaodian",
-          call_index: "1",
-          page: 1,
-        },
-        {
-          title: "赢咖6-耀世娱乐",
-          desc: "奖金号:1980",
-          icon: "yaoshi",
-          call_index: "2",
-          page: 1,
-        },
-        {
-          title: "拉菲9-门徒娱乐",
-          desc: "奖金号:1980",
-          icon: "mentu",
-          call_index: "3",
-          page: 1,
-        },
-        {
-          title: "赢咖5-盛煌娱乐",
-          desc: "奖金号:1980",
-          icon: "shenghuang",
-          call_index: "4",
-          page: 1,
-        },
-        {
-          title: "富联娱乐",
-          desc: "奖金号:1980",
-          icon: "fulian",
-          call_index: "5",
-          page: 1,
-        },
-        {
-          title: "欧亿6-蓝狮娱乐",
-          desc: "奖金号:1980",
-          icon: "jinsha lanshi",
-          call_index: "6",
-          page: 1,
-        },
-        {
-          title: "欧亿5-鼎点娱乐",
-          desc: "奖金号:1980",
-          icon: "dingdian",
-          call_index: "7",
-          page: 1,
-        },
-        {
-          title: "拉菲8-风暴娱乐",
-          desc: "奖金号:1980",
-          icon: "fengbao",
-          call_index: "8",
-          page: 1,
-        },
-        {
-          title: "赢咖4-星辉娱乐",
-          desc: "奖金号:1980",
-          icon: "xinghui",
-          call_index: "9",
-          page: 1,
-        },
-      ]
+      count_pagi("cai", cai_list);
 
-      const list_cai_items = (container, list, currentPage) => {
-        list.filter(item => item.page == currentPage).forEach((item) => {
-            container.append(
-              htmlToElement(
-                `<div class="diversion-btn" onclick="call_cai('${item.call_index}'')">
+      const list_cai_items = (container, list, start_at) => {
+        list.slice(start_at, start_at + page_size).forEach((item) => {
+          container.append(
+            htmlToElement(
+              `<div class="diversion-btn" onclick="call_cai(${item.call_index})">
                     <div class="btn">
                     <div class="img ${item.icon}"></div>
                     <div>
@@ -400,23 +414,24 @@
                     </div>
                     </div>
                 </div>`
-              )
-            );
-          });
+            )
+          );
+        });
       };
 
-      const cai_list_container = document.getElementById(
-        "cai_list_container"
-      );
-      list_cai_items(cai_list_container, cai_list, 1)
+      const cai_list_container = document.getElementById("cai_list_container");
+      list_cai_items(cai_list_container, cai_list, 0);
 
       const set_page = (type, page) => {
-         if (type == 'sport') {
-            list_sport_items(sport_list_container, sport_list, page)
-         } else if (type == 'cai') {
-            list_cai_items(cai_list_container, cai_list, page)  
-         }
-      }
+        const start_at = page_size * (page - 1);
+        if (type == "sport") {
+          sport_list_container.innerHTML = "";
+          list_sport_items(sport_list_container, sport_list, start_at);
+        } else if (type == "cai") {
+          cai_list_container.innerHTML = "";
+          list_cai_items(cai_list_container, cai_list, start_at);
+        }
+      };
     </script>
 
     <div style="display: none">
