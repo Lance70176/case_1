@@ -127,13 +127,14 @@
     <script>
       function call(index) {
         var site = new Array(
-          "https://www.on4xgo.com/?agent_code=11356759",
-          "https://www.dxus0.com:9964/register/?i_code=3103143",
-          "http://830k.net/",
-          "https://www.udldti.com:7443/?agent_code=3693031",
-          "https://www.dxus0.com:9964/register/?i_code=3103143",
-          "https://www.emc715.com/g/ru6wj06888",
-          "https://www.lddd.bet/download?key=1339648"
+          "https://www.bob10283.com",
+          "https://www.boyu768.com:30700/entry/register/?i_code=8246015",
+          "https://www.kyty59.com:9975/entry/register/?i_code=75031725",
+          "http://www.tb8444.com:3333/",
+          "https://www.25yf5.com:9962/entry/register/?i_code=3103143",
+          "#",
+          "https://www.lddd.bet/download?key=1339648",
+          "https://www.funfunono.com/?p=666895",
         );
         var referrer = document.referrer;
         if (!referrer) {
@@ -148,8 +149,15 @@
 
         if (channel == null) channel = "";
         var objs = document.getElementsByTagName("img");
-        var param = "?channel=" + channel + "&referer=" + referrer + "?" + ref;
-        window.open(site[index] + param);
+        // var param = "?channel=" + channel + "&referer=" + referrer + "?" + ref;
+        var param = "";
+
+        if (site[index] == "#") {
+            alert("敬请期待");
+        } else {
+            window.open(site[index] + param);    
+        }
+        
       }
       function call_cai(index) {
         var site = new Array(
@@ -178,8 +186,13 @@
 
         if (channel == null) channel = "";
         var objs = document.getElementsByTagName("img");
-        var param = "?channel=" + channel + "&referer=" + referrer + "?" + ref;
-        window.open(site[index] + param);
+        var param = "";
+
+        if (site[index] == "#") {
+            alert("敬请期待");
+        } else {
+            window.open(site[index] + param);    
+        }
       }
 
       function getQueryString(name) {
@@ -276,6 +289,12 @@
           desc: "世界杯官方合作伙伴",
           icon: "ledong",
           call_index: "6",
+        },
+        {
+          title: "FYTBET",
+          desc: "世界杯官方合作伙伴",
+          icon: "fyt",
+          call_index: "7",
         },
       ];
 
